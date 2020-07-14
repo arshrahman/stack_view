@@ -1,8 +1,8 @@
 name: stack_view
-description: A new Flutter package project.
+description: Page View for Stack. Easiest way to create swipeable stack of widgets. 
 version: 0.0.1
-author:
-homepage:
+author: Abdul Rahman<arsh.abdulrahman@gmail.com>
+homepage: https://github.com/arshrahman/stack_view
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

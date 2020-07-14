@@ -1,7 +1,4 @@
 library stack_view;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'package:stack_view/src/stack_view_widget.dart';
+export 'package:stack_view/src/translucent_hit_stack.dart';
