@@ -181,7 +181,6 @@ class _StackViewState extends State<StackView> {
       final double pageOffset = page - currentPage;
       double topOffset = 0.0;
       double leftOffset = 0.0;
-      double bottomOffset = 0.0;
       double scale = 1.0;
       double opacity = 1.0;
 
@@ -202,8 +201,7 @@ class _StackViewState extends State<StackView> {
         opacity = (1.0 - ((pageOffset - 1) * widget.opacityFactor)).clamp(0.0, 1.0);
       }
 
-      print(
-          'page $page pageOffset $pageOffset topOffset $topOffset leftOffset $leftOffset bottomOffset $bottomOffset scale $scale opacity $opacity');
+      print('page $page pageOffset $pageOffset topOffset $topOffset leftOffset $leftOffset scale $scale opacity $opacity');
 
       cards.add(
         Positioned.fill(
