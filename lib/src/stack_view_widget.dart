@@ -1,7 +1,8 @@
 import 'package:flutter/gestures.dart';
-import 'package:stack_view/src/translucent_hit_stack.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as Math;
+
+import 'package:stack_view/src/custom_stack.dart';
 
 class StackView extends StatefulWidget {
   /// Controls whether the widget's pages will respond to
@@ -148,7 +149,7 @@ class _StackViewState extends State<StackView> {
     return Container(
       // height: 300,
       // width: 200,
-      child: TranslucenHitStack(
+      child: Stack(
         children: <Widget>[
           buildCardStack(),
           GestureDetector(

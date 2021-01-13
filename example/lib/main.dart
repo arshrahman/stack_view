@@ -36,8 +36,8 @@ class MyHomePage extends StatelessWidget {
         body: Align(
           alignment: Alignment.center,
           child: Container(
-            width: 300,
-            height: 350,
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
             child: StackView(
               itemCount: colors.length,
               itemBuilder: (context, index) => CardItem(
@@ -45,7 +45,7 @@ class MyHomePage extends StatelessWidget {
                 color: colors[index],
               ),
               controller: PageController(),
-              scrollDirection: Axis.vertical,
+              scrollDirection: Axis.horizontal,
               stackCount: 3,
               offset: Offset(0, -10),
               scaleFactor: 0.05,
@@ -82,22 +82,28 @@ class CardItem extends StatelessWidget {
           ),
         ],
       ),
-      child: Center(
-        child: Text(
-          '$index',
-          style: TextStyle(
-            fontSize: 96,
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            shadows: [
-              Shadow(
-                color: Colors.grey[700],
-                blurRadius: 8,
-                offset: Offset(0, 4),
+      child: Column(
+        // crossAxisAlignment: CrossAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Text(
+              '$index',
+              style: TextStyle(
+                fontSize: 96,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                shadows: [
+                  Shadow(
+                    color: Colors.grey[700],
+                    blurRadius: 8,
+                    offset: Offset(0, 4),
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
